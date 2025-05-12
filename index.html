@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lugares Turísticos</title>
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <style>
-    body { margin:0; font-family:sans-serif; }
-    #map { height: 60vh; }
-    #list { padding: 10px; overflow-y: auto; max-height: 40vh; }
-    .place-item { 
-      cursor: pointer; 
-      margin:5px 0; 
-      padding:8px; 
-      background:#f0f0f0; 
-      border-radius:4px;
-    }
-    .place-item:hover { background:#e0e0e0; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App Turística Guzmán</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 </head>
 <body>
-  <div id="map"></div>
-  <div id="list"></div>
-
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <!-- Tu lógica -->
+  <main>
+    <section id="sitios" class="active"></section>
+    <section id="mapa" class="hidden">
+      <div id="map" style="height: 100%; width: 100%"></div>
+    </section>
+    <section id="clima" class="hidden">
+      <div id="weather-card"></div>
+    </section>
+  </main>
+  <nav class="bottom-nav">
+    <button onclick="navigate('sitios')">🏞️</button>
+    <button onclick="navigate('mapa')">🗺️</button>
+    <button onclick="navigate('clima')">🌤️</button>
+  </nav>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
