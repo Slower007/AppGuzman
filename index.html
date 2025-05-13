@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>App Turística Guzmán</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
+  <div id="app">
     <section id="sitios" class="active"></section>
-    <section id="mapa" class="hidden">
-      <div id="map" style="height: 100%; width: 100%"></div>
-    </section>
-    <section id="clima" class="hidden">
-      <div id="weather-card"></div>
-    </section>
-  </main>
+    <section id="mapa" class="hidden"><div id="map"></div></section>
+    <section id="clima" class="hidden"><div id="weather-card"></div></section>
+  </div>
+
   <nav class="bottom-nav">
-    <button onclick="navigate('sitios')">🏞️</button>
-    <button onclick="navigate('mapa')">🗺️</button>
-    <button onclick="navigate('clima')">🌤️</button>
+    <button id="btn-sitios" aria-label="Sitios">🏞️</button>
+    <button id="btn-mapa" aria-label="Mapa">🗺️</button>
+    <button id="btn-clima" aria-label="Clima">🌤️</button>
   </nav>
+
+  <!-- Librerías -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <!-- Lógica -->
   <script src="app.js"></script>
 </body>
 </html>
