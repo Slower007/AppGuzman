@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>App Turística Guzmán</title>
+  <!-- CSS Global y Secciones -->
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/sitios.css"/>
+  <link rel="stylesheet" href="css/detalle.css"/>
+  <link rel="stylesheet" href="css/mapa.css"/>
+  <link rel="stylesheet" href="css/clima.css"/>
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+</head>
+<body>
+  <div id="app">
+    <section id="view-sitios" class="view active"></section>
+    <section id="view-detalle" class="view hidden">
+      <button id="btn-back">&larr; Volver</button>
+      <div id="detalle-container"></div>
+    </section>
+    <section id="view-mapa" class="view hidden"></section>
+    <section id="view-clima" class="view hidden">
+      <div id="weather-container"></div>
+    </section>
+  </div>
+
+  <nav class="bottom-nav">
+    <button id="nav-sitios" class="nav-btn active">🏞️</button>
+    <button id="nav-mapa" class="nav-btn">🗺️</button>
+    <button id="nav-clima" class="nav-btn">🌤️</button>
+  </nav>
+
+  <!-- Swiper & Anime.js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <!-- Módulos JS -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
