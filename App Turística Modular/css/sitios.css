@@ -1,6 +1,0 @@
-#view-sitios .card { background:#fff;border-radius:8px;overflow:hidden;margin-bottom:1rem;box-shadow:0 2px 6px rgba(0,0,0,0.1);cursor:pointer;transition:transform .2s; }
-#view-sitios .card:hover { transform:translateY(-3px); }
-#view-sitios .card img { width:100%; height:150px; object-fit:cover; }
-#view-sitios .card .info { padding:.5rem 1rem; }
-#view-sitios .card .info h2 { font-size:1.2rem; margin-bottom:.3rem; }
-#view-sitios .card .info p { font-size:.9rem; color:#555; }
